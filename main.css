@@ -15,6 +15,7 @@ body {
     background-color: rgb(0, 85, 164);
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-bottom: 5vw;
     margin-top: 64px
 }
 
@@ -74,4 +75,10 @@ a:hover {
 
 #fixed a:hover {
     color: red
+}
+
+.blend {
+    mix-blend-mode: screen;
+    width: 50%;
+    padding-top: 5em
 }
