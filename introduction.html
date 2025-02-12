@@ -9,12 +9,57 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/ors7kbv.css">
+    <link rel="stylesheet" href="dark.css" type="text/css" id="theme">
+    <link rel="stylesheet" href="main.css" type="text/css" disabled="disabled">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                themeStylesheet.href = storedTheme;
+            }
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (themeStylesheet.href.includes('dark')) {
+                    themeStylesheet.href = 'main.css';
+                } else {
+                    themeStylesheet.href = 'dark.css';
+                }
+                localStorage.setItem('theme', themeStylesheet.href);
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="fixed">
         <h1 id="fixed">
-            <a href="index.html"> Introduction </a>
+            <div class="hover">
+                <a> Introduction </a>
+            </div>
+            <div class="hide hover">
+                <a href="index.html"><u>Back to Home</u></a>
+                <br>
+                <a href="handdrawn-maps.html">Handdrawn Maps</a>
+                <br>
+                <a href="paris-as-a-collective-representation.html">Paris as a Collective Representation</a>
+                <br>
+                <a href="emerging-elements.html">Emerging Elements</a>
+                <br>
+                <a href="the-major-elements.html">The Major Elements</a>
+                <br>
+                <a href="links.html">Links</a>
+                <br>
+                <a href="recognition-of-parisian-scenes">Recognition of Parisian Scenes</a>
+                <br>
+                <a href="paris-known-and-unknown">Paris, Known and Unknown</a>
+                <br>
+                <a href="social-perceptions">Social Perceptions</a>
+                <br>
+                <a href="intuitions-and-secrets">Intuitions and Secrets</a>
+                <br>
+                <a href="notes-references-appendix">Notes, References, Appendix</a>
+            </div>
         </h1>
     </div>
     <div class="container">
@@ -57,6 +102,10 @@
                 readily available cliches, which do not so much tap their personal ideas of the city, as their immersion
                 in a world of prepackaged platitudes. We want to get at something more personal and more closely tied to
                 direct experience.
+            </p>
+            <br>
+            <p>
+                <button id="theme-toggle">[light/dark]</button>
             </p>
         </div>
     </div>

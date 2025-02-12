@@ -9,65 +9,136 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/ors7kbv.css">
+    <link rel="stylesheet" href="dark.css" type="text/css" id="theme">
+    <link rel="stylesheet" href="main.css" type="text/css" disabled="disabled">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                themeStylesheet.href = storedTheme;
+            }
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (themeStylesheet.href.includes('dark')) {
+                    themeStylesheet.href = 'main.css';
+                } else {
+                    themeStylesheet.href = 'dark.css';
+                }
+                localStorage.setItem('theme', themeStylesheet.href);
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="fixed">
         <h1 id="fixed">
-            <a href="index.html"> Links </a>
+            <div class="hover">
+                <a> Links </a>
+            </div>
+            <div class="hide hover">
+                <a href="index.html"><u>Back to Home</u></a>
+                <br>
+                <a href="handdrawn-maps.html">Handdrawn Maps</a>
+                <br>
+                <a href="paris-as-a-collective-representation.html">Paris as a Collective Representation</a>
+                <br>
+                <a href="emerging-elements.html">Emerging Elements</a>
+                <br>
+                <a href="the-major-elements.html">The Major Elements</a>
+                <br>
+                <a href="index.html"><u>Back to Home</u></a>
+                <br>
+                <a href="recognition-of-parisian-scenes">Recognition of Parisian Scenes</a>
+                <br>
+                <a href="paris-known-and-unknown">Paris, Known and Unknown</a>
+                <br>
+                <a href="social-perceptions">Social Perceptions</a>
+                <br>
+                <a href="intuitions-and-secrets">Intuitions and Secrets</a>
+                <br>
+                <a href="notes-references-appendix">Notes, References, Appendix</a>
+            </div>
         </h1>
     </div>
     <div class="container">
         <div class="left">
+            <img class="blend" src="images/Table 8.1 2.png">
+            <img class="blend" src="images/Table 8.2 2.png">
+            <img class="blend" src="images/8.7 2.png">
+            <img class="blend" src="images/8.8 2.png">
         </div>
         <div class="right">
             <p>
-                In Table 8.1 we have listed by rank, and irrespective of when the items appeared in the subject's map,
-                the fifty elements of the Paris cityscape listed most frequently by the subjects.
+                <a href="introduction.html">In</a>
+                <o>Table 8.1</o> we have listed by rank, and irrespective
+                of when the items
+                appeared <a href="introduction.html">in</a> the subject's <a href="handdrawn-maps.html">in</a>,
+                the fifty elements of the <a href="paris-as-a-collective-representation.html"> Paris</a> cityscape
+                listed most frequently by the subjects.
             </p>
             <br>
             <p>
-                No city consists of a set of isolated elements floating in an urban vacuum, but some cities possess a
+                No city consists of a set of isolated elements floating <a href="introduction.html">in</a> an urban
+                vacuum, but some cities possess a
                 dense set of pathways tying its varied monuments and squares together. A city is either barren or
                 fertile, depending on the degree to which its varied elements are woven into an interconnected web. The
                 sum becomes greater than the parts by virtue of their relationship to each other. To uncover the
-                associational structures of Paris, we posed the following problem to our subjects:
+                associational structures of <a href="paris-as-a-collective-representation.html"> Paris</a>, we posed the
+                following problem to our subjects:
             </p>
             <br>
             <p>
-                We shall name an element in the Paris scene, then we would like you to wander with the mind's eye to the
-                next specific element in your own mental imagery, which we would then like you to write down. For
-                example, if we say "Tour Eiffel" you might summon up the scene in your mental imagery, probe around
+                We shall name an element <a href="introduction.html">in</a> the <a
+                    href="paris-as-a-collective-representation.html"> Paris</a> scene, then we would like you to wander
+                with the mind's eye to the
+                next specific element <a href="introduction.html">in</a> your own mental imagery, which we would then
+                like you to write down. For
+                example, if we say "Tour Eiffel" you might summon up the scene <a href="introduction.html">in</a> your
+                mental imagery, probe around
                 mentally, and say "Palais de Chaillot" or "Pont d'Iena," or you might think of the Champ de Mars.
                 Whatever comes to mind as forming a natural connection is what interests us.
             </p>
             <br>
             <p>
-                In this way we hoped to see how the varied elements in the subject's mental structure of Paris were held
-                together. The 20 stimulus locales that we provided the subjects are listed in Table 8.2.
+                <a href="introduction.html">In</a> this way we hoped to see how the varied elements <a
+                    href="introduction.html">in</a> the subject's mental structure of <a
+                    href="paris-as-a-collective-representation.html"> Paris</a> were held
+                together. The 20 stimulus locales that we provided the subjects are listed <a
+                    href="introduction.html">in</a>
+                <o>Table 8.2</o>.
             </p>
             <br>
             <p>
-                In Column A we have indicated the number of links forged between each stimulus location and some other
+                <a href="introduction.html">In</a> Column A we have indicated the number of links forged between each
+                stimulus location and some other
                 location by at least 10 percent of the subjects. For example, there are six such links for the Arc de
-                Triomphe, five links for the Tour Eiffel, and so on. There is a great difference in the degree to which
-                the different stimulus locales are embedded in a context of mental associations. Among the most richly
-                embedded sites are Arc de Triomphe, l'Opera, Notre Dame de Paris, and Pantheon. The most weakly embedded
+                Triomphe, five links for the Tour Eiffel, and so on. There is a great difference <a
+                    href="introduction.html">in</a> the degree to which
+                the different stimulus locales are embedded <a href="introduction.html">in</a> a context of mental
+                associations. Among the most richly
+                embedded sites are Arc de Triomphe, l'Opera, Notre Dame de <a
+                    href="paris-as-a-collective-representation.html"> Paris</a>, and Pantheon. The most weakly embedded
                 are Buttes Chaumont and Pere Lachaise.
             </p>
             <br>
             <p>
-                The structure of associations for two of the stimulus locales is shown in the "molecules" in Fig. 8.7.
+                The structure of associations for two of the stimulus locales is shown <a
+                    href="introduction.html">in</a> the "molecules" <a href="introduction.html">in</a>
+                <o>Fig. 8.7</o>.
             </p>
             <br>
             <p>
-                By linking up the separate molecules at points of overlap, one may map the entire network of
+                By linking up the separate molecules at points of overlap, one may <a href="handdrawn-maps.html">in</a>
+                the entire network of
                 associations for the city, the reticulate structure of its images.
             </p>
             <br>
             <p>
                 A related measure of the "embeddedness" is the proportion of subjects who are unable to give any
-                association whatsoever to a stimulus location. As Column B of Table 8.2 shows, this varies greatly from
+                association whatsoever to a stimulus location. As Column B of <o>Table 8.2</o> shows, this varies
+                greatly from
                 one location to the next. Fewer than one percent of the subjects were unable to provide an association
                 to the Arc de Triomphe, while 34 percent were unable to provide any association for the Pare de
                 Montsouris. The former is a well-embedded element, while the latter is poorly articulated with the main
@@ -78,8 +149,13 @@
                 Although we asked our subjects to concentrate on geographic, visual elements, they often included purely
                 social or historical features such as "La Guillotine" or "clochards," as if these elements could simply
                 not be excluded from the meaning of a particular locale. We used this information to create an
-                additional map (Fig. 8.8); one in which each locale is surrounded by the verbal associations it
-                stimulated.
+                additional <a href="handdrawn-maps.html">in</a> (<o>Fig. 8.8</o>); one <a
+                    href="introduction.html">in</a> which
+                each locale is surrounded by the verbal associations it stimulated.
+            </p>
+            <br>
+            <p>
+                <button id="theme-toggle">[light/dark]</button>
             </p>
         </div>
     </div>

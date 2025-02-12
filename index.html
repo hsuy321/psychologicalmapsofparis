@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/ors7kbv.css">
+    <link rel="stylesheet" href="dark.css" type="text/css" id="theme">
+    <link rel="stylesheet" href="main.css" type="text/css" disabled="disabled">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                themeStylesheet.href = storedTheme;
+            }
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (themeStylesheet.href.includes('dark')) {
+                    themeStylesheet.href = 'main.css';
+                } else {
+                    themeStylesheet.href = 'dark.css';
+                }
+                localStorage.setItem('theme', themeStylesheet.href);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -75,25 +95,10 @@
             </p>
             <br>
             <p>
-                <a button id="toggle-theme">[Dark Mode]</button>
+                <button id="theme-toggle">[light/dark]</button>
             </p>
         </div>
     </div>
 </body>
-
-<script>
-    var darkMode = false
-
-    function handle_dark_click() {
-        if (darkMode == true) {
-            document.body.classList.remove("dark");
-        } else {
-            document.body.classList.add("dark");
-        }
-        darkMode = !darkMode;
-    }
-
-    document.getElementById('toggle-theme').addEventListener('click', handle_dark_click)
-</script>
 
 </html>

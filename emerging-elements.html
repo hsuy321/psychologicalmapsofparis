@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/ors7kbv.css">
+    <link rel="stylesheet" href="dark.css" type="text/css" id="theme">
+    <link rel="stylesheet" href="main.css" type="text/css" disabled="disabled">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                themeStylesheet.href = storedTheme;
+            }
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (themeStylesheet.href.includes('dark')) {
+                    themeStylesheet.href = 'main.css';
+                } else {
+                    themeStylesheet.href = 'dark.css';
+                }
+                localStorage.setItem('theme', themeStylesheet.href);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -19,6 +39,7 @@
     </div>
     <div class="container">
         <div class="left">
+            <img class="blend" src="images/8.5 2.png">
         </div>
         <div class="right">
             <p>
@@ -76,7 +97,8 @@
             </p>
             <br>
             <p>
-                Figure 8.5 compares the actual course of the Seine to the average curvature imparted by the subjects.
+                <o>Figure 8.5</o> compares the actual course of the Seine to the average curvature imparted by the
+                subjects.
             </p>
             <br>
             <p>
@@ -123,6 +145,10 @@
                 The remarkable stability of the "heart of <a href="paris-as-a-collective-representation.html">Paris</a>"
                 confers a dimension of permanence to the city's
                 psychological structure.
+            </p>
+            <br>
+            <p>
+                <button id="theme-toggle">[light/dark]</button>
             </p>
         </div>
     </div>

@@ -9,17 +9,62 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/ors7kbv.css">
+    <link rel="stylesheet" href="dark.css" type="text/css" id="theme">
+    <link rel="stylesheet" href="main.css" type="text/css" disabled="disabled">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                themeStylesheet.href = storedTheme;
+            }
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (themeStylesheet.href.includes('dark')) {
+                    themeStylesheet.href = 'main.css';
+                } else {
+                    themeStylesheet.href = 'dark.css';
+                }
+                localStorage.setItem('theme', themeStylesheet.href);
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="fixed">
         <h1 id="fixed">
-            <a href="index.html"> Hand-drawn Maps </a>
+            <div class="hover">
+                <a> Hand-drawn Maps </a>
+            </div>
+            <div class="hide hover">
+                <a href="introduction.html">Introduction</a>
+                <br>
+                <a href="index.html"><u>Back to Home</u>></a>
+                <br>
+                <a href="paris-as-a-collective-representation.html">Paris as a Collective Representation</a>
+                <br>
+                <a href="emerging-elements.html">Emerging Elements</a>
+                <br>
+                <a href="the-major-elements.html">The Major Elements</a>
+                <br>
+                <a href="links.html">Links</a>
+                <br>
+                <a href="recognition-of-parisian-scenes">Recognition of Parisian Scenes</a>
+                <br>
+                <a href="paris-known-and-unknown">Paris, Known and Unknown</a>
+                <br>
+                <a href="social-perceptions">Social Perceptions</a>
+                <br>
+                <a href="intuitions-and-secrets">Intuitions and Secrets</a>
+                <br>
+                <a href="notes-references-appendix">Notes, References, Appendix</a>
+            </div>
         </h1>
     </div>
     <div class="container">
         <div class="left">
-            <img class="blend" src="images/8.1 2.png" href="wikipedia.org">
+            <img class="blend" src="images/8.1 2.png">
             <img class="blend" src="images/8.2 2.png">
             <img class="blend" src="images/8.3 2.png">
             <img class="blend" src="images/8.4 2.png">
@@ -42,7 +87,7 @@
             </p>
             <br>
             <p>
-                Map 108 (Fig. 8.1). The subject is a 25-year-old commercial agent, with university degrees <a
+                Map 108 (<o>Fig. 8.1</o>). The subject is a 25-year-old commercial agent, with university degrees <a
                     href="introduction.html">in</a> physical
                 chemistry. His first entries on the map were Boulevard St. Germain and St. Michel, then the Faculte des
                 Sciences at Jussieu, suggesting that his student experience remains dominant. The modern structures of
@@ -59,8 +104,8 @@
             </p>
             <br>
             <p>
-                Map 070 (Fig. 8.2). Map 070 is drawn by a SO-year-old woman who, at the time of the interview, lived <a
-                    href="introduction.html">in</a>
+                Map 070 (<o>Fig. 8.2</o>). Map 070 is drawn by a SO-year-old woman who, at the time of the interview,
+                lived <a href="introduction.html">in</a>
                 the
                 12th arrondissement; however, for 15 years she had resided <a href="introduction.html">in</a> the 4th,
                 which she maps with scrupulous
@@ -77,7 +122,8 @@
             </p>
             <br>
             <p>
-                Map 215 (Fig. 8.3). This subject is a 33-year-old butcher who lives <a href="introduction.html">in</a>
+                Map 215 (<o>Fig. 8.3</o>). This subject is a 33-year-old butcher who lives <a
+                    href="introduction.html">in</a>
                 the 11th arrondissement. At first
                 the
                 map looks confusing, but we begin to discern the <a href="emerging-elements.html">elements</a> of a set
@@ -101,7 +147,8 @@
             </p>
             <br>
             <p>
-                Map 037 (Fig. 8.4). A mental map is not limited to reality, but may incorporate visions of how a city
+                Map 037 (<o>Fig. 8.4</o>). A mental map is not limited to reality, but may incorporate visions of how a
+                city
                 ought
                 to be. This subject, an architect, organizes the city around the Place de la Concorde. He envisages a
                 <a href="the-major-elements.html">major</a>
@@ -155,7 +202,10 @@
                 But still, the sketch is an
                 opening
                 into his conception of the city.
-
+            </p>
+            <br>
+            <p>
+                <button id="theme-toggle">[light/dark]</button>
             </p>
         </div>
     </div>

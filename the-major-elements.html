@@ -9,46 +9,114 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/ors7kbv.css">
+    <link rel="stylesheet" href="dark.css" type="text/css" id="theme">
+    <link rel="stylesheet" href="main.css" type="text/css" disabled="disabled">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                themeStylesheet.href = storedTheme;
+            }
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (themeStylesheet.href.includes('dark')) {
+                    themeStylesheet.href = 'main.css';
+                } else {
+                    themeStylesheet.href = 'dark.css';
+                }
+                localStorage.setItem('theme', themeStylesheet.href);
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="fixed">
         <h1 id="fixed">
-            <a href="index.html"> The Major Elements </a>
+            <div class="hover">
+                <a> The Major Elements </a>
+            </div>
+            <div class="hide hover">
+                <a href="index.html"><u>Back to Home</u></a>
+                <br>
+                <a href="handdrawn-maps.html">Handdrawn Maps</a>
+                <br>
+                <a href="paris-as-a-collective-representation.html">Paris as a Collective Representation</a>
+                <br>
+                <a href="emerging-elements.html">Emerging Elements</a>
+                <br>
+                <a href="index.html"><u>Back to Home</u></a>
+                <br>
+                <a href="links.html">Links</a>
+                <br>
+                <a href="recognition-of-parisian-scenes">Recognition of Parisian Scenes</a>
+                <br>
+                <a href="paris-known-and-unknown">Paris, Known and Unknown</a>
+                <br>
+                <a href="social-perceptions">Social Perceptions</a>
+                <br>
+                <a href="intuitions-and-secrets">Intuitions and Secrets</a>
+                <br>
+                <a href="notes-references-appendix">Notes, References, Appendix</a>
+            </div>
         </h1>
     </div>
     <div class="container">
         <div class="left">
+            <img class="blend" src="images/8.6 2.png">
         </div>
         <div class="right">
             <p>
-                Altogether our subjects entered 4,132 elements in their maps, an average of 19 for each subject. If the
+                Altogether our subjects entered 4,132 <a href="emerging-elements.html"> elements</a> <a
+                    href="introduction.html">in</a> their <a href="handdrawn-maps.html"> maps</a>, an average
+                of 19 for each subject. If the
                 city did not impress on its inhabitants a sense of its structure, its highlights and nodes, we would
-                find little agreement among the subjects. But, in fact, time and again we find the same locations,
-                showing up in the handdrawn maps.Indeed, about half of all the 4,132 elements are accounted for by only
+                find little agreement among the subjects. But, <a href="introduction.html">in</a> fact, time and again
+                we find the same locations,
+                showing up <a href="introduction.html">in</a> the handdrawn <a href="handdrawn-maps.html">
+                    maps</a>.Indeed, about half of all the 4,132
+                <a href="emerging-elements.html"> elements</a> are accounted for by only
                 26 locations.
             </p>
             <br>
             <p>
                 We need to translate the frequency of information into cartographic form. Perhaps we can take a cue from
-                Rand McNally. When the population of a city is large, Rand McNally translates this information into BOLD
-                TYPOGRAPHY, and the population of a small city is expressed by smaller print. In Fig. 8.6 we have shown
-                the names of the locales, streets, and monuments in a size proportional to the number of people who
-                cited them; that is, in proportion to their salience to the Parisians.
+                Rand McNally. When the population of a city is large, Rand McNally translates this information into <o>
+                    BOLD
+                    TYPOGRAPHY</o>, and the population of a small city is expressed by smaller print. <a
+                    href="introduction.html">in</a>
+                <o>Fig. 8.6</o> we have shown
+                the names of the locales, streets, and monuments <a href="introduction.html">in</a> a size proportional
+                to the number of people who
+                cited them; that is, <a href="introduction.html">in</a> proportion to their salience to the Parisians.
             </p>
             <br>
             <p>
-                Parisians like to say that there is a tourist Paris, but the real Paris is something quite apart. But if
-                we examine the maps produced by the subjects, we see that time and again tourist Paris-the famous
-                monuments and landmarks-reappears as the basic structuring devices in their own productions of the city.
-                Paris is integral, and it is not possible to efface l'Etoile, the Louvre, and others from any
+                Parisians like to say that there is a tourist <a href="paris-as-a-collective-representation.html">
+                    Paris</a>, but the real <a href="paris-as-a-collective-representation.html"> Paris</a> is something
+                quite apart. But if
+                we examine the <a href="handdrawn-maps.html"> maps</a> produced by the subjects, we see that time and
+                again tourist <a href="paris-as-a-collective-representation.html"> Paris</a>-the famous
+                monuments and landmarks-reappears as the basic structuring devices <a href="introduction.html">in</a>
+                their own productions of the city.
+                <a href="paris-as-a-collective-representation.html"> Paris</a> is integral, and it is not possible to
+                efface l'Etoile, the Louvre, and others from any
                 intelligent representation of the city.
             </p>
             <br>
             <p>
-                In scoffing at tourist Paris, Parisians imply they have access to a much deeper treasure, and choose to
-                dissociate themselves from the city's public aspect. But, of course, the very greatness of Paris and its
-                attraction to millions reside in its very availability as a city.
+                <a href="introduction.html">In</a> scoffing at tourist <a
+                    href="paris-as-a-collective-representation.html"> Paris</a>, Parisians imply they have access to a
+                much
+                deeper treasure, and choose to
+                dissociate themselves from the city's public aspect. But, of course, the very greatness of <a
+                    href="paris-as-a-collective-representation.html"> Paris</a> and its
+                attraction to millions reside <a href="introduction.html">in</a> its very availability as a city.
+            </p>
+            <br>
+            <p>
+                <button id="theme-toggle">[light/dark]</button>
             </p>
         </div>
     </div>
