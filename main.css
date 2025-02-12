@@ -20,7 +20,7 @@ body {
 }
 
 .fixed {
-    width: 50%;
+    width: 50;
     display: flex;
     position: fixed;
     z-index: 2;
@@ -83,4 +83,29 @@ a:hover {
     width: 50%;
     padding-top: 5em;
     z-index: 0
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.hide {
+    display: none
+}
+
+.hover:hover+.hide {
+    display: block;
+}
+
+.hide:hover {
+    display: block;
+}
+
+body.dark {
+    background-color: black;
 }

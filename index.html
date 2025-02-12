@@ -14,7 +14,32 @@
 <body>
     <div class="fixed">
         <h1 id="fixed">
-            <a> Psychological Maps of Paris </a>
+            <div class="hover">
+                <a> Psychological Maps of Paris </a>
+            </div>
+            <div class="hide hover">
+                <a href="introduction.html">Introduction</a>
+                <br>
+                <a href="handdrawn-maps.html">Handdrawn Maps</a>
+                <br>
+                <a href="paris-as-a-collective-representation.html">Paris as a Collective Representation</a>
+                <br>
+                <a href="emerging-elements.html">Emerging Elements</a>
+                <br>
+                <a href="the-major-elements.html">The Major Elements</a>
+                <br>
+                <a href="links.html">Links</a>
+                <br>
+                <a href="recognition-of-parisian-scenes">Recognition of Parisian Scenes</a>
+                <br>
+                <a href="paris-known-and-unknown">Paris, Known and Unknown</a>
+                <br>
+                <a href="social-perceptions">Social Perceptions</a>
+                <br>
+                <a href="intuitions-and-secrets">Intuitions and Secrets</a>
+                <br>
+                <a href="notes-references-appendix">Notes, References, Appendix</a>
+            </div>
         </h1>
     </div>
     <div class="container">
@@ -48,8 +73,27 @@
                 they are shaped by social factors, and therefore acquire the status of a collective representations—that
                 is, symbolic configurations of belief and knowledge promoted and disseminated by the culture.
             </p>
+            <br>
+            <p>
+                <a button id="toggle-theme">[Dark Mode]</button>
+            </p>
         </div>
     </div>
 </body>
+
+<script>
+    var darkMode = false
+
+    function handle_dark_click() {
+        if (darkMode == true) {
+            document.body.classList.remove("dark");
+        } else {
+            document.body.classList.add("dark");
+        }
+        darkMode = !darkMode;
+    }
+
+    document.getElementById('toggle-theme').addEventListener('click', handle_dark_click)
+</script>
 
 </html>
