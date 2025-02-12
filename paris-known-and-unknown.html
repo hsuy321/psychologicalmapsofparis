@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ors7kbv.css">
+    <link rel="stylesheet" href="dark.css" type="text/css" id="theme">
+    <link rel="stylesheet" href="main.css" type="text/css" disabled="disabled">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                themeStylesheet.href = storedTheme;
+            }
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (themeStylesheet.href.includes('dark')) {
+                    themeStylesheet.href = 'main.css';
+                } else {
+                    themeStylesheet.href = 'dark.css';
+                }
+                localStorage.setItem('theme', themeStylesheet.href);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="fixed">
+        <h1 id="fixed">
+            <div class="hover">
+                <a> Paris, Known and Unknown </a>
+            </div>
+            <div class="hide hover">
+                <a href="introduction.html">Introduction</a>
+                <br>
+                <a href="handdrawn-maps.html">Handdrawn Maps</a>
+                <br>
+                <a href="paris-as-a-collective-representation.html">Paris as a Collective Representation</a>
+                <br>
+                <a href="emerging-elements.html">Emerging Elements</a>
+                <br>
+                <a href="the-major-elements.html">The Major Elements</a>
+                <br>
+                <a href="links.html">Links</a>
+                <br>
+                <a href="recognition-of-parisian-scenes.html">Recognition of Parisian Scenes</a>
+                <br>
+                <a href="index.html"><u>Back to Home</u></a>
+                <br>
+                <a href="social-perceptions">Social Perceptions</a>
+                <br>
+                <a href="intuitions-and-secrets">Intuitions and Secrets</a>
+                <br>
+                <a href="notes-references-appendix">Notes, References, Appendix</a>
+            </div>
+        </h1>
+    </div>
+    <div class="container">
+        <div class="left">
+            <img class="blend" src="images/8.10 2.png">
+        </div>
+        <div class="right">
+            <p>
+                The photographic recognition test tells us about the knowledge of specific landmarks, but we wanted a
+                more general picture of the known and unknown parts of the city. Accordingly, we provided each subject
+                with an illustrated <a href="handdrawn-maps.html">map</a> of the city, which we overprinted with the
+                boundaries of the 80 administrative
+                districts (quartiers). We asked each subject to study his <a href="handdrawn-maps.html">map</a> and
+                indicate the ten quartiers with which
+                he was most familiar, and those that were least familiar to him. By combining the response forall
+                subjects, we generate a gradient of asserted familiarity across the entire city.
+            </p>
+            <br>
+            <p>
+                The five most familiar quartiers are contiguous and center on the Quartier Latin and Ile de la Cite. The
+                next five choices accrete to this cluster, but also extend to the Champs Elysees and Etoile. When
+                subjects are asked to list the quartier they know least well, we find a striking movement away from the
+                center of <a href="paris-as-a-collective-representation.html">Paris</a> to the peripheral
+                arrondissements.
+                <o>Figure 8.10</o> shows how these data, translated into respective arrondissements, delineate a ring of
+                unknown areas around the core of <a href="paris-as-a-collective-representation.html">Paris</a>.
+                Curiously, <a href="introduction.html">in</a> this <a href="handdrawn-maps.html">map</a> the boundary
+                between known and unknown
+                parts of the city retraces part of the route of the last wall of <a
+                    href="paris-as-a-collective-representation.html">Paris</a>, the Fermiers Generaux. Although
+                the wall was tom down <a href="introduction.html">in</a> 1859 its effects endure <a
+                    href="introduction.html">in</a> the mental <a href="handdrawn-maps.html">maps</a> of contemporary
+                Parisians, with the
+                least familiar parts of the city lying outside the boundary where the wall once stood.
+            </p>
+            <br>
+            <p>
+                The residential patterns of <a href="paris-as-a-collective-representation.html">Paris</a> create a class
+                basis to known and unknown parts of the city. Generally
+                speaking, the wealthier segments of the population live <a href="introduction.html">in</a> the western
+                part of the city, and the poorer
+                classes live <a href="introduction.html">in</a> the east. It is not surprising, therefore, that the
+                areas least known to the
+                working-class subjects should differ from those of the middle-class professionals, as Table 8.4 shows.
+                While all of the least-known arrondissements are on the periphery of <a
+                    href="paris-as-a-collective-representation.html">Paris</a>, there is no overlap between
+                the class <a href="links.html">linked</a> perceptions. It is only a knowledge of the central
+                arrondissements of <a href="paris-as-a-collective-representation.html">Paris</a> that is
+                claimed by both groups.
+            </p>
+            <br>
+            <p>
+                <button id="theme-toggle">[light/dark]</button>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
