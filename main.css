@@ -31,14 +31,14 @@ body {
 }
 
 .left {
-    width: 40%;
+    width: 50%;
     border-right: 1px solid white;
     padding-right: 1%;
     text-align: right
 }
 
 .right {
-    width: 60%;
+    width: 50%;
     padding-left: 1%
 }
 
