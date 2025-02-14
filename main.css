@@ -16,7 +16,7 @@ body {
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 5vw;
-    margin-top: 64px
+    margin-top: 64px;
 }
 
 .fixed {
@@ -35,7 +35,7 @@ body {
 }
 
 .right {
-    width: 40%;
+    width: 50%;
 }
 
 h1 {
@@ -48,15 +48,16 @@ h1 {
 
 p {
     font-family: "source-serif-pro", serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-size: 20 px;
     color: white;
+    width: 80%;
 }
 
 a {
     font-family: "source-serif-pro", serif;
-    font-weight: 700;
+    font-weight: 600;
     font-style: italic;
     font-size: 20 px;
     color: red;
@@ -65,10 +66,6 @@ a {
 h2 {
     font-variant: small-caps;
     color: white;
-}
-
-.fixed:hover+.container {
-    filter: blur(1px)
 }
 
 a:hover {
@@ -92,7 +89,7 @@ a:hover {
     mix-blend-mode: screen;
     width: 50%;
     padding-top: 5em;
-    z-index: 0;
+    z-index: 2;
 }
 
 /* Dropdown Button */

@@ -41,13 +41,13 @@ body {
 }
 
 .right {
-    width: 40%;
+    width: 50%;
 }
 
 
 h1 {
     font-family: "source-serif-pro", serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: italic;
     font-size: 32px;
     color: white;
@@ -59,6 +59,7 @@ p {
     font-style: normal;
     font-size: 20 px;
     color: white;
+    width: 80%;
 }
 
 a {
