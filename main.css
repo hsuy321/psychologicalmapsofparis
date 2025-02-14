@@ -20,7 +20,7 @@ body {
 }
 
 .fixed {
-    width: 50;
+    width: 50%;
     display: flex;
     position: fixed;
     z-index: 2;
@@ -31,18 +31,20 @@ body {
 }
 
 .left {
-    width: 50%;
+    width: 30%;
+    border-right: 1px solid white
 }
 
 .right {
-    width: 50%;
+    width: 70%;
+    padding-left: 1%
 }
 
 h1 {
     font-family: "source-serif-pro", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 32px;
+    font-size: 24px;
     color: white;
 }
 
@@ -88,21 +90,11 @@ a:hover {
 .blend {
     mix-blend-mode: screen;
     width: 50%;
-    padding-top: 5em;
     z-index: 2;
 }
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
-
 .hide {
-    display: none
+    display: none;
 }
 
 .hover:hover+.hide {
@@ -114,7 +106,7 @@ a:hover {
 }
 
 o {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 u {
