@@ -31,12 +31,12 @@ body {
 }
 
 .left {
-    width: 30%;
+    width: 50%;
     border-right: 1px solid white
 }
 
 .right {
-    width: 70%;
+    width: 50%;
     padding-left: 1%
 }
 
@@ -44,7 +44,7 @@ h1 {
     font-family: "source-serif-pro", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 24px;
+    font-size: 32px;
     color: white;
 }
 
