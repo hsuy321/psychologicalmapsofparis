@@ -26,6 +26,12 @@ body {
     z-index: 2;
 }
 
+.mobilefixed {
+    width: 100;
+    position: block;
+    z-index: 2;
+}
+
 .container {
     display: flex;
 }
@@ -35,8 +41,9 @@ body {
 }
 
 .right {
-    width: 50%;
+    width: 40%;
 }
+
 
 h1 {
     font-family: "source-serif-pro", serif;
@@ -80,6 +87,7 @@ a:hover {
     background-color: black;
 }
 
+
 #fixed a:hover {
     color: red
 }
@@ -118,4 +126,25 @@ o {
 
 u {
     text-decoration: underline 1px;
+}
+
+@media (max-width: 601px) {
+    .Mobile {
+        display: block;
+    }
+
+    .Computer {
+        display: none
+    }
+
+}
+
+@media (min-width: 600px) {
+    .Computer {
+        display: block;
+    }
+
+    .Mobile {
+        display: none;
+    }
 }
