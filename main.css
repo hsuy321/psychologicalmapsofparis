@@ -20,7 +20,7 @@ body {
 }
 
 .fixed {
-    width: 20%;
+    width: 40%;
     display: flex;
     position: fixed;
     z-index: 4;
