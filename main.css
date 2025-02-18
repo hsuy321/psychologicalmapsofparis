@@ -24,6 +24,7 @@ body {
     display: flex;
     position: fixed;
     z-index: 4;
+    background-color: rgb(0, 85, 164)
 }
 
 
@@ -49,7 +50,7 @@ h1 {
     font-family: "source-serif-pro", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 32px;
+    font-size: 24px;
     color: white;
 }
 
@@ -97,7 +98,12 @@ a:hover {
 .blend {
     mix-blend-mode: screen;
     width: 50%;
-    z-index: 4;
+    z-index: 10;
+}
+
+.title {
+    mix-blend-mode: screen;
+    width: 60%
 }
 
 .hide {
@@ -135,9 +141,12 @@ u {
         padding-bottom: 1rem
     }
 
+    .title {
+        width: 80%;
+    }
+
     .left {
-        width: 1rem;
-        border-right: 1px solid white;
+        display: none
     }
 
     .right {

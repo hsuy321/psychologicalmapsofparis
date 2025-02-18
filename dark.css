@@ -12,45 +12,46 @@ font-weight: 700;
 font-style: italic; */
 
 body {
-    background-color: black;
+    background-color: white;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 5vw;
-    margin-top: 64px
+    margin-top: 64px;
 }
 
 .fixed {
-    width: 50;
+    width: 40%;
     display: flex;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
+    background-color: white
 }
 
-.mobilefixed {
-    width: 100;
-    position: block;
-    z-index: 2;
-}
 
 .container {
     display: flex;
 }
 
+
 .left {
     width: 50%;
+    border-right: 1px solid black;
+    padding-right: 1%;
+    text-align: right;
+    z-index: 3
 }
 
 .right {
     width: 50%;
+    padding-left: 1%;
 }
-
 
 h1 {
     font-family: "source-serif-pro", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 32px;
-    color: white;
+    font-size: 24px;
+    color: black;
 }
 
 p {
@@ -58,9 +59,10 @@ p {
     font-weight: 300;
     font-style: normal;
     font-size: 20 px;
-    color: white;
+    color: black;
     width: 80%;
 }
+
 
 a {
     font-family: "source-serif-pro", serif;
@@ -68,6 +70,7 @@ a {
     font-style: italic;
     font-size: 20 px;
     color: red;
+    z-index: 100
 }
 
 h2 {
@@ -84,31 +87,27 @@ a:hover {
     font-weight: 400;
     font-style: italic;
     font-size: 32 px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
 }
-
 
 #fixed a:hover {
     color: red
 }
 
 .blend {
-    mix-blend-mode: screen;
+    mix-blend-mode: difference;
     width: 50%;
-    z-index: 0
+    z-index: 10;
 }
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    font-size: 16px;
-    border: none;
+.title {
+    mix-blend-mode: difference;
+    width: 60%
 }
 
 .hide {
-    display: none
+    display: none;
 }
 
 .hover:hover+.hide {
@@ -127,23 +126,31 @@ u {
     text-decoration: underline 1px;
 }
 
-@media (max-width: 601px) {
-    .Mobile {
-        display: block;
+@media only screen and (max-width: 600px) {
+    body {
+        margin-top: 2rem
     }
 
-    .Computer {
+    h1 {
+        font-size: 36px
+    }
+
+    .fixed {
+        position: sticky;
+        width: 100%;
+        padding-bottom: 1rem
+    }
+
+    .left {
         display: none
     }
 
-}
-
-@media (min-width: 600px) {
-    .Computer {
-        display: block;
+    .right {
+        width: 100%;
+        padding-left: 1rem
     }
 
-    .Mobile {
-        display: none;
+    p {
+        width: 90%
     }
 }
