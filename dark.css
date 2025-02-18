@@ -103,7 +103,7 @@ a:hover {
 
 .title {
     mix-blend-mode: difference;
-    width: 60%
+    width: 75%
 }
 
 .hide {
@@ -151,6 +151,6 @@ u {
     }
 
     p {
-        width: 90%
+        width: 90%;
     }
 }
