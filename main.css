@@ -26,9 +26,11 @@ body {
     z-index: 4;
 }
 
+
 .container {
     display: flex;
 }
+
 
 .left {
     width: 50%;
