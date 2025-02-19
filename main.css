@@ -20,7 +20,7 @@ body {
 }
 
 .fixed {
-    width: 40%;
+    width: 30%;
     display: flex;
     position: fixed;
     z-index: 4;
@@ -107,7 +107,7 @@ a:hover {
 
 .title {
     mix-blend-mode: screen;
-    width: 100%
+    width: 100%;
 }
 
 .hide {
@@ -160,5 +160,9 @@ u {
 
     p {
         width: 90%
+    }
+
+    .title {
+        padding-left: 5%
     }
 }
